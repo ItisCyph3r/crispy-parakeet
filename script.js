@@ -97,9 +97,9 @@ function drawText() {
     //fades out the text by decreasing the opacity
     if(frameNumber >= 250 && frameNumber < 500){
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("To my wonderful, beautiful, ever loving, stubborn,", canvas.width/2, canvas.height/2);
+        context.fillText("To my wonderful, beautiful, ever loving, stubborn, sharp mouthed WOMAN 🥰💜", canvas.width/2, canvas.height/2);
         // context.fillText("everyday day I cannot believe how lucky I am", canvas.width/2, canvas.height/2);
-        To my wonderful, beautiful, ever loving, stubborn, sharp mouthed WOMAN 🥰💜
+
         opacity = opacity - 0.01;
     }
 
