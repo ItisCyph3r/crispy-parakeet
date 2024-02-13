@@ -89,11 +89,11 @@ function drawText() {
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
 
-    if(frameNumber < 250){
-        context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("To my wonderful, beautiful, ever loving, stubborn, sharp mouthed WOMAN 🥰💜", canvas.width/2, canvas.height/2);
-        opacity = opacity + 0.01;
-    }
+    // if(frameNumber < 250){
+    //     context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+    //     context.fillText("To my wonderful, beautiful, ever loving, stubborn, sharp mouthed WOMAN 🥰💜", canvas.width/2, canvas.height/2);
+    //     opacity = opacity + 0.01;
+    // }
     //fades out the text by decreasing the opacity
     if(frameNumber >= 250 && frameNumber < 500){
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
@@ -135,13 +135,31 @@ function drawText() {
         opacity = 0;
     }
     if(frameNumber > 1000 && frameNumber < 1250){
+        // context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
+        // drawTextWithLineBreaks(["visits this special website. It's funny and romantic", "in its own unique way, just like us."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        // context.fillText("You know, before you even said YES to me, I had already noticed you a year before.", canvas.width/2, canvas.height/2);
+        // opacity = opacity + 0.01;
+
+
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("to be alive, and to get to spend this life with you", canvas.width/2, canvas.height/2);
-        opacity = opacity + 0.01;
+        
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["You know, before you even said YES to me", "I had already noticed you a year before."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("You know, before you even said YES to me, I had already noticed you a year before.", canvas.width/2, canvas.height/2);
+        }
+
+        opacity = opacity - 0.01;
     }
     if(frameNumber >= 1250 && frameNumber < 1500){
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("to be alive, and to get to spend this life with you", canvas.width/2, canvas.height/2);
+        
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["You know, before you even said YES to me", "I had already noticed you a year before."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            context.fillText("You know, before you even said YES to me, I had already noticed you a year before.", canvas.width/2, canvas.height/2);
+        }
+
         opacity = opacity - 0.01;
     }
 
@@ -150,12 +168,26 @@ function drawText() {
     }
     if(frameNumber > 1500 && frameNumber < 1750){
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("is so incredibly, unfathomably unlikely", canvas.width/2, canvas.height/2);
-        opacity = opacity + 0.01;
+        
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["I was completely blown away by your beauty, your behavior,", " and your incredible sense of style.", "It's funny because you actually have a", "seamless resemblance to my kid sis."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            // context.fillText("I was completely blown away by your beauty, your behavior, and your incredible sense of style. It's funny because you actually have a seamless resemblance to my kid sis.", canvas.width/2, canvas.height/2);
+            drawTextWithLineBreaks(["I was completely blown away by your beauty, your behavior, and your incredible sense of style.", "It's funny because you actually have a seamless resemblance to my kid sis."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        }
+
+        opacity = opacity - 0.01;
     }
     if(frameNumber >= 1750 && frameNumber < 2000){
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
-        context.fillText("is so incredibly, unfathomably unlikely", canvas.width/2, canvas.height/2);
+        
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["I was completely blown away by your beauty, your behavior,", " and your incredible sense of style.", "It's funny because you actually have a", "seamless resemblance to my kid sis."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        } else {
+            // context.fillText("I was completely blown away by your beauty, your behavior, and your incredible sense of style. It's funny because you actually have a seamless resemblance to my kid sis.", canvas.width/2, canvas.height/2);
+            drawTextWithLineBreaks(["I was completely blown away by your beauty, your behavior, and your incredible sense of style.", "It's funny because you actually have a seamless resemblance to my kid sis."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+        }
+
         opacity = opacity - 0.01;
     }
 
@@ -166,9 +198,9 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["and yet here I am to get the impossible", "chance to get to know you"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["But here's the thing, you had no idea who I was,", "yet I was head over heels in love with you."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("and yet here I am to get the impossible chance to get to know you", canvas.width/2, canvas.height/2);
+            context.fillText("But here's the thing, you had no idea who I was, yet I was head over heels in love with you.", canvas.width/2, canvas.height/2);
         }
 
         opacity = opacity + 0.01;
@@ -177,12 +209,12 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["and yet here I am to get the impossible", "chance to get to know you"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["But here's the thing, you had no idea who I was,", "yet I was head over heels in love with you."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("and yet here I am to get the impossible chance to get to know you", canvas.width/2, canvas.height/2);
+            context.fillText("But here's the thing, you had no idea who I was, yet I was head over heels in love with you.", canvas.width/2, canvas.height/2);
         }
-        
-        opacity = opacity - 0.01;
+
+        opacity = opacity + 0.01;
     }
 
     if(frameNumber == 2500){
@@ -192,9 +224,10 @@ function drawText() {
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I love you so much {name}, more than", "all the time and space in the universe can contain"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["So, I mustered up the courage to get your number,", "and we started talking. It was all calm and fun,", "until you ghosted me for no reason! 😂", "But fate had other plans for us."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("I love you so much {name}, more than all the time and space in the universe can contain", canvas.width/2, canvas.height/2);
+            // context.fillText("So, I mustered up the courage to get your number, and we started talking. It was all calm and fun, until you ghosted me for no reason! 😂 But fate had other plans for us.", canvas.width/2, canvas.height/2);
+            drawTextWithLineBreaks(["So, I mustered up the courage to get your number,and we started talking. It was all", "calm and fun, until you ghosted me for no reason! 😂, But fate had other plans for us."], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         }
 
         opacity = opacity + 0.01;
